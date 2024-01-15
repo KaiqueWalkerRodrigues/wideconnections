@@ -1,0 +1,15 @@
+<?php 
+    if(isset($_GET['falha'])){
+        session_start();
+        session_destroy();
+        header('Location:login.php?falha');
+    }elseif(isset($_GET['tr'])){
+        session_start();
+        session_destroy();
+        header('Location:mudarsenha.php');
+    }else{
+        session_start();
+        session_destroy();
+        header('Location:login.php');
+    }
+?>
